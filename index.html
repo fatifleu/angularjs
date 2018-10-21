@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="educa">
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+<body>
+        <p><a href="#!/">Main</a></p>
+
+        <a href="#!/red">Red</a>
+        
+        
+        <div ng-view></div>
+
+    <script src="/app/app.js"></script>
+    <!--components-->
+    <script src="/app/components/acceuil/acceuil.component.js"></script>
+    <script src="app/components/red/red.component.js"></script>
+    <!--services-->
+    <script src="/app/services/Acceuil.js"></script>
+</body>
+</html>
