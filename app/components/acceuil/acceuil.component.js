@@ -1,28 +1,32 @@
 (function(){
     'use strict';
-    angular.module('acceuilComponent',[])
+    var app = angular.module('acceuilComponent',['matiereComponent','reussiteComponent','ngRoute'])
         .component('acceuilComponent',{
-            controller: ['AcceuilService',AcceuilController],
+            controller: [AcceuilController],
             controllerAs:'vm',
             templateUrl:'app/components/acceuil/acceuil.html'
             
         });
-    
-    function AcceuilController(AcceuilService){
+        app.config(function($routeProvider) {
+            $routeProvider
+            .when("/", {
+                template: '<matiere-component></matiere-component>'
+            })
+            .when("/red", {
+                template: '<reussite-component></reussite-component>'
+            })
+            .otherwise({ redirectTo: '/' });
+        });
+
+
+
+    function AcceuilController(){
         var vm=this;
 
         vm.$onInit=onInit;
         function onInit()
         {
-            vm.table=AcceuilService.getData().then(
-                        function mySuccess(response) {
-                            vm.table = response.data;
-                        },
-                        function myError(response) {
-                            vm.status = response.statusText;
-                        }
-            );
-
+ 
 
         }
     }

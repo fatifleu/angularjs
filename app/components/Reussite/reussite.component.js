@@ -1,14 +1,14 @@
 (function(){
     'use strict';
-    angular.module('redComponent',[])
-        .component('redComponent',{
-            controller: [RedController],
+    angular.module('reussiteComponent',[])
+        .component('reussiteComponent',{
+            controller: [ReussiteController],
             controllerAs:'vm',
-            templateUrl:'app/components/red/red.html'
+            templateUrl:'app/components/Reussite/reussite.html'
             
         });
     
-    function RedController(){
+    function ReussiteController(){
         var vm=this;
 
         vm.$onInit=onInit;

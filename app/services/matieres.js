@@ -1,8 +1,8 @@
 (function(){
     'use strict';
-    angular.module('educa').service('AcceuilService',['$http',AcceuilServ]);
+    angular.module('educa').service('matiereService',['$http',MatiereServ]);
 
-  function AcceuilServ($http){
+  function MatiereServ($http){
    
 
     function getData(){ 
